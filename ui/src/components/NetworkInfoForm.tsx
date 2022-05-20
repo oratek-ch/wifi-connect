@@ -85,7 +85,7 @@ export const NetworkInfoForm = ({
 			mt={5}
 		>
 			<Heading.h3 align="center" mb={4}>
-				Hi! Please choose your WiFi from the list
+				Hello! Please choose your WiFi from the list
 			</Heading.h3>
 
 			<Form
@@ -99,6 +99,7 @@ export const NetworkInfoForm = ({
 				uiSchema={getUiSchema(isSelectedNetworkEnterprise)}
 				submitButtonProps={{
 					width: '60%',
+					backgroundColor: 'black',
 					mx: '20%',
 					mt: 3,
 					disabled: availableNetworks.length <= 0,

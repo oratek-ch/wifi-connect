@@ -8,6 +8,10 @@ ARG VERSION="4.4.0"
 RUN curl -Ls "https://github.com/balena-io/wifi-connect/releases/download/v$VERSION/wifi-connect-v$VERSION-linux-%%BALENA_ARCH%%.tar.gz" \
   | tar -xvz -C  /usr/src/app/
 
+# Now we copy the local folder here
+RUN rm -r  /usr/src/app/ui
+COPY ui/build /usr/src/app/ui
+
 COPY scripts/start.sh .
 
 CMD ["bash", "start.sh"]
